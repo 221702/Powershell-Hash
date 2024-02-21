@@ -1,0 +1,6 @@
+1. Load Powershell 
+2. Paste the target file path between the two double speech marks. Leave the "\*" at the end of the file path. This will incluse all subfiles/folders.
+3. Adapt the output file location.
+4. Output file can be .csv or .txt
+
+Get-ChildItem -Path "\*" -Recurse | Get-FileHash | Format-List | Out-File -FilePath C:\Users\-\Documents\Hash_Values.txt
